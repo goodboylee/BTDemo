@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JBe-cZ-I0F">
+                                <rect key="frame" x="9" y="41" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.93136175369999996" blue="0.50245156729999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="搜索设备"/>
+                                <connections>
+                                    <action selector="searchDevice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AEI-5H-v9i"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="胎心率" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lSg-cp-X8z">
+                                <rect key="frame" x="11" y="88" width="52" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="宫缩" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XQf-OT-ioS">
+                                <rect key="frame" x="11" y="125" width="35" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="GfT-Ip-wqX">
+                                <rect key="frame" x="0.0" y="176" width="375" height="250"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="AvY-2P-zHz"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="ptj-OK-98V"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="c7G-vR-nnm"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="GfT-Ip-wqX" firstAttribute="top" secondItem="XQf-OT-ioS" secondAttribute="bottom" constant="30" id="4fL-HX-mEm"/>
+                            <constraint firstItem="lSg-cp-X8z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="11" id="9iF-lX-XU6"/>
+                            <constraint firstItem="GfT-Ip-wqX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="A0h-2a-Kgx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GfT-Ip-wqX" secondAttribute="trailing" id="RBL-IQ-cfq"/>
+                            <constraint firstItem="lSg-cp-X8z" firstAttribute="top" secondItem="JBe-cZ-I0F" secondAttribute="bottom" constant="17" id="UBC-C1-bAB"/>
+                            <constraint firstItem="JBe-cZ-I0F" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="21" id="Vd2-Iz-fkX"/>
+                            <constraint firstItem="XQf-OT-ioS" firstAttribute="top" secondItem="lSg-cp-X8z" secondAttribute="bottom" constant="16" id="jsY-xj-MgD"/>
+                            <constraint firstItem="XQf-OT-ioS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="11" id="kzP-zm-A5U"/>
+                            <constraint firstItem="JBe-cZ-I0F" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="9" id="u62-CX-cfl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="deviceTableView" destination="GfT-Ip-wqX" id="HwC-Dc-O0q"/>
+                        <outlet property="gongsuoLabel" destination="XQf-OT-ioS" id="fJu-7U-MNo"/>
+                        <outlet property="searchBtn" destination="JBe-cZ-I0F" id="0ia-yp-jd3"/>
+                        <outlet property="taiXinLabel" destination="lSg-cp-X8z" id="oxB-J7-nLT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

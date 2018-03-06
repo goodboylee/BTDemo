@@ -1,0 +1,17 @@
+//
+//  TaiJianyiPreHeader.pch
+//  BTDemo
+//
+//  Created by lotus on 2017/11/8.
+//  Copyright © 2017年 李灿荣. All rights reserved.
+//
+
+#ifndef TaiJianyiPreHeader_pch
+#define TaiJianyiPreHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import <CoreBluetooth/CoreBluetooth.h>
+
+#endif /* TaiJianyiPreHeader_pch */
